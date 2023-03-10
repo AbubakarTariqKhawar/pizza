@@ -47,7 +47,7 @@
                       <h3><b>Comment</b></h3>
                       <textarea class="form-control" id="description" name="description" rows="4" cols="50" required></textarea>
                       </br>
-                      <button type="button" class="btn" onclick="saveR(document.getElementsByClassName('rate').value,document.getElementById('description').value)">Save</button>
+                      <button type="button" class="btn" onclick="saveR(document.getElementsByName('rate'),document.getElementById('description').value)">Save</button>
                       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                     </form>
                   </div>

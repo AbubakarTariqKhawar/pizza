@@ -331,7 +331,6 @@
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Paid</th>
-                        <th>Rate</th>
                     </tr>
                       
             ";
@@ -345,7 +344,6 @@
                 $list .= "<td>".$row['OdeQuantity']."</td>";
                 $list .= "<td>".$row['OdePrice']."€</td>";
                 $list .= "<td>".$row['OrdPaid']."</td>";
-                $list .= '<td><button style="all: unset;cursor: pointer;" onclick="openForm()"><span style="font-size:150%;color:#85857D;">&starf;</span></button></td>';
                 $list .= "</tr>";
                 
             }
@@ -369,7 +367,20 @@
             $stmt->execute();
             $result=$stmt->get_result();
 
-            $list = "";
+            $list = "
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product Name</th>
+                        <th>User Name</th>
+                        <th>When Order Creater</th>
+                        <th>Address</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Paid</th>
+                        <th>Rate</th>
+                    </tr>
+            
+            ";
             while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                 $list .= "<tr>";
                 $list .= "<td>".$row['OrdId']."</td>";
@@ -380,6 +391,8 @@
                 $list .= "<td>".$row['OdeQuantity']."</td>";
                 $list .= "<td>".$row['OdePrice']."€</td>";
                 $list .= "<td>".$row['OrdPaid']."</td>";
+                $list .= '<td><button style="all: unset;cursor: pointer;" onclick="openForm()"><span style="font-size:150%;color:#85857D;">&starf;</span></button></td>';
+                $list .= "</tr>";
             }
 
             return $list;

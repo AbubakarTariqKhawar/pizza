@@ -12,9 +12,19 @@ if($method == "OPTIONS") {
 
 	
 	if($method == "GET"){
+		session_start();
+        $id_User = $_SESSION['user_id'];
+        $admin = $_SESSION['user_admin'];
 
-		$a = QUERY::getAllOrder();
-		echo $a;
+        $allOrders = '';
+
+        if($admin == 1){
+            $allOrders = QUERY::getAllOrder();
+        }else{
+            $allOrders = QUERY::getAllOrderbyUserId($id_User);
+        }
+
+		echo $allOrders;
 		
 	}
 		

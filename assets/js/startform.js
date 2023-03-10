@@ -8,24 +8,26 @@
   }
 
   function saveR(rate,description){
-    let r = rate;
+    let star = rate;
     let d = description;
-    alert('checking rating');
-    alert(r);
-    alert('checking description');
-    alert(d);
+    
+    for (let i=0; i<star.length; i++){
+      if(star[i].checked){
+        console.log(i+'it checked');
+      }
 
+    }
   }
 
 
-  fetch('http://localhost/AbubakarTariq_Restaurante/pizza/api', {
+  fetch('http://localhost/github/pizza/pizza/api', {
     method: 'get'
   }).then((response) => response.text())
   .then(function(response) {
     document.getElementById("allorderjava").innerHTML = response;
   });
 
-
+/*
   fetch('http://localhost/AbubakarTariq_Restaurante/pizza/api', {
         method: 'post',
         headers: {
@@ -39,3 +41,5 @@
     .then(function(response) {
             console.log(response);
     });
+
+*/
