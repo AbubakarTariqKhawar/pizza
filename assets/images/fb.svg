@@ -1,0 +1,17 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360">
+	<title>fb-svg</title>
+	<defs>
+		<linearGradient id="g1" x1="88" y1="172" x2="276" y2="172" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#ffffff"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: #ffffff;stroke: url(#g1) } 
+		.s1 { fill: #0000ff } 
+	</style>
+	<path id="Capa 1" class="s0" d="m88 56h188v232h-188z"/>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m271.9 46c18.6 2.4 34.1 12.9 42.5 28.9 6.8 13 6.6 9.6 6.6 100.4v81.8l-2.6 7.7c-3 9.2-9.8 19.7-16.2 25.2-6.8 5.9-19.2 11.6-28.2 13-5.3 0.8-32.6 1-94.5 0.8-76.9-0.3-87.5-0.6-91.6-2-21-7.4-35.1-22.9-39.4-43.3-2.2-10.4-2.2-157.6 0-168 4.9-23.3 24.1-41.4 47-44.5 9.3-1.2 166.6-1.2 176.4 0zm-46.4 27.6c-40.4-2.1-64.8 17.9-68.3 56.1l-0.7 7.5-13.5 0.1-13.5 0.2-0.3 13.2-0.3 13.3h27.1v115h34v-115.1l24 0.6v-27.5h-24v-3.8c0-4.6 2.5-15.4 4.4-19 2.1-4.1 7.5-9.1 11.5-10.9 7.5-3.2 24.5-2.6 34.4 1.2 1.6 0.7 1.7-0.4 1.7-13.9v-14.5l-3.7-1c-2.1-0.6-7.8-1.2-12.8-1.5z"/>
+	</g>
+</svg>
