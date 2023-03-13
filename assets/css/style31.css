@@ -853,3 +853,11 @@ table {width: 1000px; margin:auto;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+.nostyle{
+  border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: hidden;
+        background-color: #E4D5C5;
+}

@@ -31,6 +31,10 @@
                   <div class="form-popup" id="myForm">
                     <form  class="form-container">
                       <h1><b>Rate this Order</b></h1>
+                      <label for="userId">User ID</label>
+                      <input type="number" class="nostyle" id="userId" name="userId" value="<?php echo $_SESSION['user_id']; ?>" readonly/>
+                      <h3><b>Order ID</b></h3>
+                      <input type="number" class="nostyle" id="orderId" name="orderId" value="<?php echo $_SESSION['user_id']; ?>" readonly/>
                       <div class="rate">
                         <input type="radio" id="star5" name="rate" value="5" />
                         <label for="star5" title="5 Star">5 stars</label>
@@ -44,6 +48,7 @@
                         <label for="star1" title="1 Star">1 star</label>
                       </div>
                       </br></br>
+                      
                       <h3><b>Comment</b></h3>
                       <textarea class="form-control" id="description" name="description" rows="4" cols="50" required></textarea>
                       </br>
