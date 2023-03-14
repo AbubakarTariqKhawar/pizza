@@ -1,6 +1,13 @@
 
   function openForm() {
+    /*console.log('orer id');
+    let hola = document.getElementById("orderID");
+    console.log(hola);
+    */
     document.getElementById("myForm").style.display = "block";
+
+    
+    
   }
   
   function closeForm() {

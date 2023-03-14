@@ -34,7 +34,7 @@
                       <label for="userId">User ID</label>
                       <input type="number" class="nostyle" id="userId" name="userId" value="<?php echo $_SESSION['user_id']; ?>" readonly/>
                       <h3><b>Order ID</b></h3>
-                      <input type="number" class="nostyle" id="orderId" name="orderId" value="<?php echo $_SESSION['user_id']; ?>" readonly/>
+                      <input type="number" class="nostyle" id="orderId" name="orderId" value="" readonly/>
                       <div class="rate">
                         <input type="radio" id="star5" name="rate" value="5" />
                         <label for="star5" title="5 Star">5 stars</label>
@@ -66,7 +66,16 @@
  
 
 </div>
-    
+<script>
+let atable = document.getElementById('allorderjava'),rindex;
+for (let i = 1; i < atable.rows.length; i++){
+  atable.rows[i].onclick = function(){
+        rIndex = this.rowIndex;
+        console.log(rIndex);
+      //document.getElementById("orderId").value = this.cells[0].innerHTML;
+  };
+}
+</script>
 <script src="<?=base_url.'assets/js/startform.js'?>"></script>
 
             
