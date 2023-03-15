@@ -391,7 +391,7 @@
                 $list .= "<td>".$row['OdeQuantity']."</td>";
                 $list .= "<td>".$row['OdePrice']."€</td>";
                 $list .= "<td>".$row['OrdPaid']."</td>";
-                $list .= '<td><button style="all: unset;cursor: pointer;" onclick="openForm()"><span style="font-size:150%;color:#85857D;">&starf;</span></button></td>';
+                $list .= '<td><button style="all: unset;cursor: pointer;" onclick="openForm('.$row['OrdId'].')"><span style="font-size:150%;color:#85857D;">&starf;</span></button></td>';
                 $list .= "</tr>";
             }
 

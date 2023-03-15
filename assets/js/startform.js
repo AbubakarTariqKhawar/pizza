@@ -1,12 +1,11 @@
 
-  function openForm() {
-    /*console.log('orer id');
-    let hola = document.getElementById("orderID");
-    console.log(hola);
-    */
+  function openForm(order) {
+    console.log('orer id');
+    console.log(order);
+    
     document.getElementById("myForm").style.display = "block";
 
-    
+    document.getElementById("orderId").value = order;
     
   }
   
