@@ -52,8 +52,9 @@
                       <h3><b>Comment</b></h3>
                       <textarea class="form-control" id="description" name="description" rows="4" cols="50" required></textarea>
                       </br>
-                      <button type="button" class="btn" onclick="saveR(document.getElementsByName('rate'),document.getElementById('description').value)">Save</button>
-                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                      <button type="button" class="btn btn-dark" onclick="saveR(document.getElementById('userId').value,document.getElementById('orderId').value,document.getElementsByName('rate'),document.getElementById('description').value)">Save</button>
+                      <button type="button" class="btn btn-dark" onclick="closeForm()">Close</button>
+                      <p id="requireMsg"><p>
                     </form>
                   </div>
 

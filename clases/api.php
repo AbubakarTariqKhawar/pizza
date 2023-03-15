@@ -31,16 +31,19 @@ if($method == "OPTIONS") {
 
 	
 	if($method == "POST"){
-        //inserted
-        $a = json_decode(QUERY::insertreviews($OreOrdId,$OreUseId,$OreStar,$OreComment));
-		echo $a;
-        /*
+        
 		$datosJSON = file_get_contents('php://input');
 		$datos = json_decode($datosJSON);
-		$nombre = $datos->nombre;
-		$edad = $datos->edad;
-		echo "Hola ".$nombre." veo que ya tienes ".$edad." años";
-        */
+		
+        $userId = $datos->userId;
+        $orderId = $datos->orderId;
+        $description = $datos->description;
+        $finalRate = $datos->finalRate;
+
+        $insertReview = QUERY::insertreviews($orderId,$userId,$finalRate,$description);
+
+		echo $insertReview;
+        
 	}
 	
 	

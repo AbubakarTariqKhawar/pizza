@@ -382,6 +382,7 @@
             
             ";
             while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                
                 $list .= "<tr>";
                 $list .= "<td>".$row['OrdId']."</td>";
                 $list .= "<td>".$row['ProName']."</td>";
@@ -498,10 +499,10 @@
 
         }
 
-        public static function insertreviews($OreOrdId,$OreUseId,$OreStar,$OreComment){
+        public static function insertreviews($orderId,$userId,$finalRate,$description){
             $con = DataBase::connect();
             $stmt = $con->prepare("insert into orderreview (OreOrdId,OreUseId,OreStar,OreComment,OreDate) values (?,?,?,?,now())");
-            $stmt->bind_param("iiis", $OreOrdId,$OreUseId,$OreStar,$OreComment);
+            $stmt->bind_param("iiis", $orderId,$userId,$finalRate,$description);
             //Execute statement 
             $stmt->execute();
             //$result=$stmt->get_result();
