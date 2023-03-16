@@ -356,13 +356,14 @@
 
         public static function getAllOrderbyUserId($id){
             $con = DataBase::connect();
-            $stmt = $con->prepare("SELECT o.OrdId, o.OrdCreatedDate, p.ProName, u.UseName, a.AddAddress, o.OrdPaid, od.OdeQuantity, od.OdePrice
-                                    FROM orders AS o 
-                                    INNER JOIN orderdetail AS od 
-                                    INNER JOIN product AS p 
-                                    INNER JOIN address AS a 
-                                    INNER JOIN users AS u 
-                                    ON o.OrdUseId = u.UseId AND o.OrdAddId = a.AddId AND o.OrdId = od.OdeOrdId AND od.OdeProId = p.ProId where OrdUseId = $id");
+            $stmt = $con->prepare("SELECT o.OrdId, o.OrdCreatedDate, p.ProName, u.UseName, a.AddAddress, o.OrdPaid, od.OdeQuantity, od.OdePrice, re.OreId
+                                    FROM orders o 
+                                    LEFT JOIN orderdetail od ON o.OrdId = od.OdeOrdId
+                                    LEFT JOIN product p ON od.OdeProId = p.ProId
+                                    LEFT JOIN address a ON o.OrdAddId = a.AddId
+                                    LEFT JOIN users u ON o.OrdUseId = u.UseId
+                                    LEFT JOIN orderreview re ON o.OrdId = re.OreOrdId
+                                    where OrdUseId = $id");
             //Execute statement 
             $stmt->execute();
             $result=$stmt->get_result();
@@ -382,18 +383,33 @@
             
             ";
             while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                if($row['OreId'] != null && $row['OreId'] != ""){
+                    $list .= "<tr>";
+                    $list .= "<td>".$row['OrdId']."</td>";
+                    $list .= "<td>".$row['ProName']."</td>";
+                    $list .= "<td>".$row['UseName']."</td>";
+                    $list .= "<td>".$row['OrdCreatedDate']."</td>";
+                    $list .= "<td>".$row['AddAddress']."</td>";
+                    $list .= "<td>".$row['OdeQuantity']."</td>";
+                    $list .= "<td>".$row['OdePrice']."€</td>";
+                    $list .= "<td>".$row['OrdPaid']."</td>";
+                    $list .= '<td><button style="all: unset;" ><span style="font-size:150%;color: yellow;">&starf;</span></button></td>';
+                    $list .= "</tr>";
+                }else{
+                    $list .= "<tr>";
+                    $list .= "<td>".$row['OrdId']."</td>";
+                    $list .= "<td>".$row['ProName']."</td>";
+                    $list .= "<td>".$row['UseName']."</td>";
+                    $list .= "<td>".$row['OrdCreatedDate']."</td>";
+                    $list .= "<td>".$row['AddAddress']."</td>";
+                    $list .= "<td>".$row['OdeQuantity']."</td>";
+                    $list .= "<td>".$row['OdePrice']."€</td>";
+                    $list .= "<td>".$row['OrdPaid']."</td>";
+                    $list .= '<td><button style="all: unset;cursor: pointer;" onclick="openForm('.$row['OrdId'].')"><span style="font-size:150%;color:#85857D;">&starf;</span></button></td>';
+                    $list .= "</tr>";
+                }
                 
-                $list .= "<tr>";
-                $list .= "<td>".$row['OrdId']."</td>";
-                $list .= "<td>".$row['ProName']."</td>";
-                $list .= "<td>".$row['UseName']."</td>";
-                $list .= "<td>".$row['OrdCreatedDate']."</td>";
-                $list .= "<td>".$row['AddAddress']."</td>";
-                $list .= "<td>".$row['OdeQuantity']."</td>";
-                $list .= "<td>".$row['OdePrice']."€</td>";
-                $list .= "<td>".$row['OrdPaid']."</td>";
-                $list .= '<td><button style="all: unset;cursor: pointer;" onclick="openForm('.$row['OrdId'].')"><span style="font-size:150%;color:#85857D;">&starf;</span></button></td>';
-                $list .= "</tr>";
+                
             }
 
             return $list;

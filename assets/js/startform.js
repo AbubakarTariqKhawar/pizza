@@ -55,6 +55,13 @@
         .then(function(response) {
                 console.log(response);
                 //notie.alert({ type: 1, text: 'Success!', time: 2 })
+                fetch('http://localhost/github/pizza/pizza/api', {
+                  method: 'get'
+                }).then((responseGet) => responseGet.text())
+                .then(function(responseGet) {
+                  document.getElementById("allorderjava").innerHTML = responseGet;
+                  document.getElementById("myForm").style.display = "none";
+                });
         });
 
       }else{
