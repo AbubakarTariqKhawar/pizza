@@ -172,10 +172,10 @@ class pizzaController{
         include ("views/paymentP.php");
         
     }
-    public function contactUs(){
+    public function review(){
 
         include ("views/header.php");
-        include ("views/contactUs.php");
+        include ("views/review.php");
         include ("views/footer.php");
         
     }

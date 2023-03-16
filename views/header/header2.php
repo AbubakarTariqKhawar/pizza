@@ -61,7 +61,7 @@
                 <a class="nav-link  buttoncrack" href="<?=base_url.'pizza/aboutus'?>">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  buttoncrack" href="<?=base_url.'pizza/contactUs'?>">Contact Us</a>
+                <a class="nav-link  buttoncrack" href="<?=base_url.'pizza/review'?>">Review</a>
               </li>
           </ul>
           <div id="botones_tienda_escritorio" class="form-inline my-2 my-lg-0">
