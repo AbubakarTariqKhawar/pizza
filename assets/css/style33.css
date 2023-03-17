@@ -498,6 +498,12 @@ a.navbar-brand{
   margin-left: 5%;
 }
 
+.reviewselect{
+  width: 50px; 
+  float: left; 
+  margin-left: 5%;
+}
+
 .cartselect1{
   width: 280px; 
   float: left; 
@@ -863,4 +869,8 @@ table {width: 1000px; margin:auto;}
 
 .notie-container {
   box-shadow: none;
+}
+
+.checked {
+  color: orange;
 }

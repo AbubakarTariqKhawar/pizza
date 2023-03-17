@@ -197,6 +197,12 @@ class pizzaController{
         include ("clases/api.php");
         
     }
+    public function apiReview(){
+
+        include ("clases/query.php");
+        include ("clases/apiReview.php");
+        
+    }
     
 
 

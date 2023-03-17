@@ -531,6 +531,87 @@
             $con->close();
 
         }
+
+
+        public static function getAllReviews($arder){
+            $con = DataBase::connect();
+            $stmt = $con->prepare("SELECT u.UseName, u.UseSurname, re.OreStar, re.OreComment, re.OreDate
+                                    FROM orderreview re 
+                                    LEFT JOIN users u ON u.UseId = re.OreUseId
+                                    order by re.OreStar ".$arder.";");
+            //$stmt->bind_param("s",$arder);
+            //Execute statement 
+            $stmt->execute();
+            $result=$stmt->get_result();
+
+            $list = "";
+            while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                $star = "";
+                if($row['OreStar'] == 1){
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                }
+
+                if($row['OreStar'] == 2){
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                }
+
+                if($row['OreStar'] == 3){
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                }
+
+                if($row['OreStar'] == 4){
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star"></span>';
+                }
+
+                if($row['OreStar'] == 5){
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                    $star .= '<span class="fa fa-star checked"></span>';
+                }
+
+                $list .= '<div class="row">';
+                $list .= '<div class=" col-12 mt-3 ">';
+                $list .= '<div class="card w-90 mb-3" style="background-color: #F1F1F1;">';
+                $list .= '<div class="card-body">';
+                $list .= '<img style="margin-right: 10px; margin-left: 6px;" src="'.base_url.'assets/images/userR.svg'.'" alt="User image"  class="cartimg">';
+                $list .= '<h5 class="card-title"><b>'.$row['UseName'].'&nbsp;'.$row['UseSurname'].'</b></h5>';
+                $list .= $star;
+                $list .= '&nbsp;&nbsp;<h7 class="card-title">'.$row['OreDate'].'</h7>';
+                $list .= '<p class="card-text">'.$row['OreComment'].'</p>';
+                $list .= '</div>';
+                $list .= '</div>';
+                $list .= '</div>';
+                $list .= '</div>';
+                $list .= '<hr style="color: red;">';
+
+                
+                  
+            }
+            
+
+            return $list;
+
+            $con->close();
+
+        }
         
         
 

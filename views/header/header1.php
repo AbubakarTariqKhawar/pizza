@@ -25,6 +25,7 @@
     <link href="<?=base_url.'assets/css/style33.css'?>" rel="stylesheet" type="text/css" media="screen">
     <script src="<?=base_url.'assets/js/bootstrap.bundle.min.js'?>"></script>
     <link href="<?=base_url.'assets/css/notie.min.css'?>" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 
 </head>
