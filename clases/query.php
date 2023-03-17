@@ -393,7 +393,7 @@
                     $list .= "<td>".$row['OdeQuantity']."</td>";
                     $list .= "<td>".$row['OdePrice']."€</td>";
                     $list .= "<td>".$row['OrdPaid']."</td>";
-                    $list .= '<td><button style="all: unset;" ><span style="font-size:150%;color: yellow;">&starf;</span></button></td>';
+                    $list .= '<td><button style="all: unset;cursor: pointer;" onclick="youReviewd()"><span style="font-size:150%;color: yellow;">&starf;</span></button></td>';
                     $list .= "</tr>";
                 }else{
                     $list .= "<tr>";

@@ -17,7 +17,7 @@
     </nav>
 </footer>
 </div>
-
+<script src="https://unpkg.com/notie"></script>
 </body>
 <?php
 

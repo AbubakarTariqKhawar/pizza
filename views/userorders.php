@@ -54,7 +54,6 @@
                       </br>
                       <button type="button" class="btn btn-dark" onclick="saveR(document.getElementById('userId').value,document.getElementById('orderId').value,document.getElementsByName('rate'),document.getElementById('description').value)">Save</button>
                       <button type="button" class="btn btn-dark" onclick="closeForm()">Close</button>
-                      <p id="requireMsg"><p>
                     </form>
                   </div>
 
@@ -68,7 +67,9 @@
 
 </div>
 
-<script src="<?=base_url.'assets/js/startform.js'?>"></script>
+
+<script src="<?=base_url.'node_modules/startform.js'?>"></script>
+
 
             
 
