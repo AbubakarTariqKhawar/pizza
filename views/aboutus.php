@@ -25,14 +25,19 @@
     Arrive for dinner at 5.15pm.</br>
   </p>
   <h2><b>Video Promotion</b></h2>
-  <div class="videoa">
-  <video height="315" controls id="mi-video" src=<?=base_url."assets/video/pizzavideo.mp4"?>></video><br><br>
-  <button id="videoboton" ><a class="nav-link" href=<?=base_url."pizza/menu"?>>Menu</a></button>
-  <!--<a href=<?=base_url."pizza/menu"?>><img class="nav-link" id="videoboton" src="<?=base_url."assets/images/logof2.svg"?>" alt="logo"></a>-->
+
+  <div class="videoa" style="position:relative;">
+
+    <div id="video_overlays">
+      <a href=<?=base_url."pizza/menu"?>><img class="nav-link videobutton" id="videoboton" src="<?=base_url."assets/images/logof2.svg"?>" alt="logo" height="101" width="165"></a>
+    </div>
+
+    <div>
+      <video height="315" controls id="mi-video" src=<?=base_url."assets/video/pizzavideo.mp4"?>></video><br><br>
+    </div>
 
   <!--<iframe   src="https://www.youtube.com/embed/qDocfZRRgJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
   </div>
-
 
 </div>
 

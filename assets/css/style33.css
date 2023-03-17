@@ -874,3 +874,22 @@ table {width: 1000px; margin:auto;}
 .checked {
   color: orange;
 }
+
+.videobutton{
+  margin-top: 0%;
+  float: left;
+  margin-left: 0%;
+  margin-left: 10%;
+}
+
+
+#video_overlays {
+  position:absolute;
+  width:160px;
+  min-height:40px;
+  z-index:300000;
+  bottom:138px;
+  /*left:203px;*/
+  left: 385px;
+  text-align:center;
+}
