@@ -558,7 +558,7 @@ a.navbar-brand{
   font-size: 33px;
 }
 
-.videoa iframe{
+.videoa video{
   width: 560px;
 }
 
@@ -754,7 +754,7 @@ a.navbar-brand{
     font-size: 30px;
   }
 
-  .videoa iframe{
+  .videoa video{
     width: 350px;
   }
   

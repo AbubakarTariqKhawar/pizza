@@ -26,10 +26,16 @@
   </p>
   <h2><b>Video Promotion</b></h2>
   <div class="videoa">
-  <iframe  height="315" src="https://www.youtube.com/embed/qDocfZRRgJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <video height="315" controls id="mi-video" src=<?=base_url."assets/video/pizzavideo.mp4"?>></video><br><br>
+  <button id="videoboton" ><a class="nav-link" href=<?=base_url."pizza/menu"?>>Menu</a></button>
+  <!--<a href=<?=base_url."pizza/menu"?>><img class="nav-link" id="videoboton" src="<?=base_url."assets/images/logof2.svg"?>" alt="logo"></a>-->
+
+  <!--<iframe   src="https://www.youtube.com/embed/qDocfZRRgJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
   </div>
 
 
 </div>
+
+<script src="<?=base_url.'assets/js/video.js'?>"></script>
 
 
