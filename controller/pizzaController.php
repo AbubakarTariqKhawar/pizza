@@ -57,6 +57,7 @@ class pizzaController{
             session_start();
             //var_dump($_SESSION['cookieValue']);
             setcookie("lastOrder", $_SESSION['cookieValue'], time() + 10 );
+            setcookie("lastQrvalue", $_SESSION['cookieQrvalue'], time() + 10 );
             header("Refresh:0");
           
         }

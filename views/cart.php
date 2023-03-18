@@ -89,18 +89,21 @@
 
 
               $orderFin = '';
+              $qrOrdert = '';
               if(isset($_SESSION['cart'])){
                 foreach($_SESSION['cart'] as $row){
                   $orderFin .= '<p><b>Product Name: </b> '.$row->getName().', <b>Quantity: </b> '.$row->getQuantity().', <b>Size: </b> '.$row->getSize().', <b>Price: </b> '.$row->calculateSQ().'€, <b>Category: </b> '.$row->getCategory().'.</p>';
-                  
+                  $qrOrdert .= 'Product Name: '.$row->getName().', Quantity: '.$row->getQuantity().', Size: '.$row->getSize().', Price: '.$row->calculateSQ().'€, Category: '.$row->getCategory().'. <==> ';
   
                 }
                 $orderFin .= '<p><b>Total Price: </b> '.$_SESSION['totalPrice'].'€</p>';
+                $qrOrdert .= '<---> Total Price: '.$_SESSION['totalPrice'].'€ <--->';
               }
               
 
               
               $_SESSION['cookieValue'] = $orderFin;
+              $_SESSION['cookieQrvalue'] = $qrOrdert;
               
 
             ?>

@@ -30,10 +30,30 @@
      
      
      echo ($_COOKIE['lastOrder']);
+     $qro = $_COOKIE['lastQrvalue'];
      
      ?>
+     <div  class="row " >
+                <div class=" col-12 mt-3" >
+                  <div>
+                    <button type="button" id="qrButton" class="btn btn-dark" onclick="getQr()">QrCode</button>
+                  </div>
+                  <div class="allqr">
+
+                    <div id="fqr" class="qrcode2"> 
+                      <img  src="<?=base_url.'assets/images/qri.svg'?>" alt="qr" height="500" title="qr" />
+                    </div>
+
+                    <div id="showQr" class="qrcode1">
+                      <img  src="https://api.qrserver.com/v1/create-qr-code/?data='<?=$qro?>'&amp;size=205x205" alt="qr" title="qr" />
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
 
     </div> 
+    
     
     
   </div>
@@ -41,4 +61,6 @@
  
 
 </div>
+
+<script src="<?=base_url.'assets/js/qrcode.js'?>"></script>
 

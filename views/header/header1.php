@@ -22,7 +22,7 @@
     <link rel="icon" type="image/x-icon" href="<?=base_url.'assets/icons/logofa.png'?>">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
     <link href="<?=base_url.'assets/css/bootstrap.min.css'?>" rel="stylesheet">
-    <link href="<?=base_url.'assets/css/style33.css'?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?=base_url.'assets/css/style34.css'?>" rel="stylesheet" type="text/css" media="screen">
     <script src="<?=base_url.'assets/js/bootstrap.bundle.min.js'?>"></script>
     <link href="<?=base_url.'assets/css/notie.min.css'?>" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

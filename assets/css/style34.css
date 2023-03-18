@@ -113,6 +113,24 @@ a.navbar-brand{
   margin: 0%;
 }
 
+.allqr{
+  margin-left:36%;
+}
+
+.qrcode1{
+  /*background-color: blue;*/
+  position:absolute;
+  float: left;
+  margin-top: 5.7%;
+  margin-left: 4%;
+}
+
+.qrcode2{
+  /*background-color: green;*/
+  position:relative;
+  float: left;
+}
+
 @media (max-width: 992px) {
   #banner_principal{
     background-size: auto 100%;
@@ -145,12 +163,34 @@ a.navbar-brand{
     width: 100px;
   }
 
+  .allqr{
+    margin-left:31%;
+  }
+
+  .qrcode1{
+    background-color: blue;
+    float: left;
+    margin-top: 10%;
+    margin-left: 7%;
+  }
+
   
 }
 
 @media (max-width: 500px) {
   .logomm{
     margin-left: 10%;
+  }
+
+  .allqr{
+    margin-left:0%;
+  }
+
+  .qrcode1{
+    background-color: blue;
+    float: left;
+    margin-top: 25%;
+    margin-left: 17%;
   }
 }
 
@@ -619,6 +659,13 @@ a.navbar-brand{
     margin-left: 4%;
   }
 
+  .qrcode1{
+    background-color: blue;
+    float: left;
+    margin-top: 7%;
+    margin-left: 5%;
+  }
+
   
 
   
@@ -893,3 +940,5 @@ table {width: 1000px; margin:auto;}
   left: 385px;
   text-align:center;
 }
+
+

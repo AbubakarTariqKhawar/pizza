@@ -15,7 +15,7 @@ if(isset($_SESSION['cart'])){
 
     $insert_order = QUERY::insertOrders($OrdId,$OrdUseId,$OrdAddId,$OrdAddIns,$OrdPaid,$OrdRecived);
 
-    var_dump($_SESSION['cart']);
+    //var_dump($_SESSION['cart']);
 
     foreach($_SESSION['cart'] as $row){
         
