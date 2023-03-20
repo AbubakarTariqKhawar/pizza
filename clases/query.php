@@ -589,7 +589,7 @@
 
                 $list .= '<div class="row">';
                 $list .= '<div class=" col-12 mt-3 ">';
-                $list .= '<div class="card w-90 mb-3" style="background-color: #F1F1F1;">';
+                $list .= '<div class="card w-90 mb-3" style="background-color: #FCFCFC; border-radius: 20px;">';
                 $list .= '<div class="card-body">';
                 $list .= '<img style="margin-right: 10px; margin-left: 6px;" src="'.base_url.'assets/images/userR.svg'.'" alt="User image"  class="cartimg">';
                 $list .= '<h5 class="card-title"><b>'.$row['UseName'].'&nbsp;'.$row['UseSurname'].'</b></h5>';
