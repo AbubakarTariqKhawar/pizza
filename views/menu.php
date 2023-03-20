@@ -9,11 +9,25 @@
 
 <div class="container-lg" style="padding-top: 30px;">
 
+<label style="font-size: 25px; margin-bottom: 22px; ">
+        <b>Choose Arder:</b>
+          <select style="margin-top: 2px;" class="form-select  cartselect marder" name="marder">
+            <option value="all">Show All</option>
+            <option value="noV">Pizza</option>
+            <option value="ve">Vegetarian</option>
+          </select>
+      </label>
+<div id="noV">
   <div style=" margin: 0%; padding: 0%;">
     <h2 style="font-size: 45px; margin-bottom: 0%; padding-bottom: 0%;"><b>Pizzas</b></h2>
   </div>
 
+  <?php
+    require_once ("clases/createpizza.php");
+  ?>
+
   
+
   <?php
     include("arrow/arrowsrightmenu.html");
   ?>
@@ -24,7 +38,7 @@
           <div class="row">
 
             <?php
-              require_once ("clases/createpizza.php");
+              
             
               foreach($pizzaNormal as $row){?>
 
@@ -45,8 +59,9 @@
     </section>
 
   </div>
+  </div>
 
-
+  <div id="ve">
   <?php
     include("arrow/arrowsleft.html");
   ?>
@@ -57,7 +72,7 @@
 
 <div style="padding: 5%; padding-top: 0%; margin-top: 0%; padding-bottom: 3%" >
 
-  <section id="pasteles" class="container mt-5 ">
+  <section id="pasteles" class="container mt-5 " >
         <div class="row">
 
           <?php
@@ -83,7 +98,9 @@
   </section>
 
 </div>
+</div>
 
 </div>
 
 
+<script src="<?=base_url.'assets/js/menu.js'?>"></script>
