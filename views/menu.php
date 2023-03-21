@@ -62,17 +62,16 @@
   </div>
 
   <div id="ve">
+  
+  <div style=" margin: 0%; padding: 0%;">
+    <h2 style="font-size: 45px; margin-bottom: 0%; padding-bottom: 0%;"><b>Vegetarian</b></h2>
+  </div>
   <?php
-    include("arrow/arrowsleft.html");
+    include("arrow/arrowsrightmenu.html");
   ?>
-  <div style="float: left; margin: 0%; padding: 0%;"><h2 style="font-size: 33px;">&nbsp;Vegetarian&nbsp;</h2></div>
-  <?php
-    include("arrow/arrowsrightmenu1.html");
-  ?>
-
 <div style="padding: 5%; padding-top: 0%; margin-top: 0%; padding-bottom: 3%" >
 
-  <section id="pasteles" class="container mt-5 " >
+  <section id="pasteles" class="container mt-2 " >
         <div class="row">
 
           <?php
